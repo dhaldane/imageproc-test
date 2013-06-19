@@ -56,7 +56,7 @@ int main() {
     SetupPorts();
     sclockSetup();
 
-    LED_3 = 1;
+    LED_1 = 1;
 
     // Message Passing
     fun_queue = carrayCreate(FUN_Q_LEN);
@@ -80,8 +80,8 @@ int main() {
 
     pidSetup();
 
-    LED_3 = 0;
-    LED_1 = 1;
+    LED_1 = 0;
+    LED_3 = 1;
     while(1){
         // Send outgoing radio packets
         radioProcess();
