@@ -212,7 +212,7 @@ unsigned char test_dflash(unsigned char type, unsigned char status,
 
     // Write into dfmem
     dfmemWrite((unsigned char *)(mem_data), sizeof(mem_data), page, 0, 1);
-
+    delay_ms(100);
     // ---------- string 1 -----------------------------------------------------
     // Get a new packet from the pool
     packet = radioRequestPacket(strlen(str1));
@@ -448,6 +448,7 @@ unsigned char test_mpu(unsigned char type, unsigned char status, \
     Payload pld;
 
     mpuBeginUpdate();
+    delay_ms(10);
 
     int buf[7];
 

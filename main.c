@@ -76,6 +76,7 @@ int main() {
     delay_ms(100);
     amsEncoderSetup();
     mpuSetup(1);
+    dfmemSetup(0);
     tiHSetup();
 
     pidSetup();
